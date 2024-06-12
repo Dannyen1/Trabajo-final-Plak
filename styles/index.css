@@ -1,0 +1,215 @@
+
+/* Importaciones */
+@import url('https://fonts.cdnfonts.com/css/exo-3');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+
+/* Variables*/
+:root{
+    --tipografia:'Exo', sans-serif;
+    --tipografia1:'Poppins', sans-serif;
+    --colorFondo: #92DDC2;
+    --colorClaro:#DDC292;
+    --colorTexto:#353530;
+    --colorContraste:#B23B29;
+}
+
+
+*{
+    /* margin ->margen externo */
+    margin:0;
+    /* padding -> margen interno */
+    padding: 0;
+}
+
+body{
+    /* Ancho del tamaño de mi pantalla */
+    width: 100%;
+
+    /* background-color -> color de fondo */
+    background-color: var(--colorTexto);
+    /* tipografía */
+    font-family: var(--tipografia);
+    /* color de la letra */
+    color: var(--colorTexto);
+    /* Quitar el scroll horizontal 
+        overflow -> si se sobresale el contenido
+        hidden -> esconder
+    */
+    overflow-x: hidden;
+    /* ajuste a mis dimensiones */
+    box-sizing: border-box;
+}
+
+
+/* ---------HEADER------- */
+
+/* contenedor padre -> determinen dimensiones */
+header{
+    /* ancho */
+    /* vw -> ancho de pantalla
+        vh -> alto de pantalla
+    */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Lo que está dentro del header son hijos */
+
+.menuNav{
+    background-color: var(--colorClaro);
+    width: 100%;
+    height: 100px;
+}
+
+/* contenedor padre de las listas que quiero modificar una al lado del otro */
+.listaMenu{
+    height:100%;
+    /* disposición flexible -> los elementos uno al lado del otro */
+    display: flex;
+    /* centrar */
+    /* centra an x */
+    justify-content: center;
+    /* centrar en y */
+    align-items: center;
+    /* separeciones entre elementos hijos */
+    gap: 50px;
+    /* quitar viñetas de lista */
+    list-style: none;
+}
+
+.listaMenu a{
+    /* quitar la decoración del texto */
+    text-decoration: none;
+    /* color del texto */
+    color: var(--colorTexto);
+    /* tamaño de texto */
+    font-size: 18px;
+    /* más ancha la letra -> negrilla */
+    font-weight: bold;
+}
+
+.listaMenu a:hover{
+    color: white;
+}
+
+.logo{
+    /* ancho */
+    width: 50px;
+    /* alto */
+    height: 50px;
+}
+
+
+/* banner */
+/* contenedor padre de la imagen */
+.baner{
+    width: 100%;
+    height: 80%;
+}
+/* mi imagen ocupa todo el espacio de su padre */
+.baner img{
+    width: 100%;
+    height: 100%;
+    /* manipular la img */
+    object-fit: fill;
+}
+
+/* ---------MAIN------- */
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* dispongan una debajo de la otra */
+    flex-direction: column;
+}
+
+/* Seccion 1 */
+.seccion1{
+    width: 80%;
+}
+#div-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#div-video iframe{
+    width: 50%;
+}
+
+#div-video p{
+    width: 50%;
+}
+/* Seccion 2 */
+
+.seccion2{
+    width: 80%;
+}
+
+.contenedor-img{
+
+    /* organizar en filas y columnas */
+    display: grid;
+    /* filas */
+    /* 1fr -> me ocupe una fracción del espacio */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* Columnas  */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.contenedor-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.titulo{
+    /* centrar texto */
+    text-align: center;
+    /* textos en mayúscula */
+    text-transform: uppercase;
+    /* margen arriba y abajo - derecha e izquierda */
+    margin: 20px 0px;
+}
+
+/* ---------FOOTER------- */
+
+/* definir qué es lo que van a editar */
+/* contenedor padre */
+footer{
+    /* dimensiones */
+    width: 100%;
+    height: auto;
+    /* aspectos generales */
+    background-color: var(--colorClaro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    color: white;
+}
+
+.logo-2{
+    width: 100px;
+    height: 100px;
+}
+
+/* Los íconos en css y html, se toman como si fueran texto */
+.redesSociales{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+i{
+    margin: 15px;
+    color: white;
+}
