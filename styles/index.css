@@ -1,42 +1,52 @@
-
 /* Importaciones */
 @import url('https://fonts.cdnfonts.com/css/exo-3');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-
+/* condiciones o estilos iniciales de mi página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", "Exo";
+}
 
 /* Variables*/
-:root{
-    --tipografia:'Exo', sans-serif;
-    --tipografia1:'Poppins', sans-serif;
+:root {
+    /*PLAK ESTILOS Y COLORES */
     --colorFondo: #92DDC2;
-    --colorClaro:#DDC292;
-    --colorTexto:#353530;
-    --colorContraste:#B23B29;
+    --SegundoColorFondo: #353530;
+    --TercerColorFondo: #FFFFFF;
+    --colorText: #fff;
+    --colorSecundario: #ccc;
+    --colorPrincipal: #76ABAE;
+    --colorNavIcons: #92DDC2;
+    --color2NavIcons: #DDC292;
+    --Fuente-h2: 3rem;
+
+    /*Colores pag Actividad 1, BORRAR LUEGO*/
+    --tipografia: "Exo", sans-serif;
+    --tipografia1: 'Poppins', sans-serif;
+    --colorFondo: #92DDC2;
+    --colorClaro: #DDC292;
+    --colorTexto: #353530;
+    --colorContraste: #B23B29;
 }
 
 
-*{
-    /* margin ->margen externo */
-    margin:0;
-    /* padding -> margen interno */
-    padding: 0;
-}
 
-body{
+body {
     /* Ancho del tamaño de mi pantalla */
     width: 100%;
 
     /* background-color -> color de fondo */
-    background-color: var(--colorTexto);
+    background-color: var(--TercerColorFondo);
     /* tipografía */
     font-family: var(--tipografia);
     /* color de la letra */
     color: var(--colorTexto);
-    /* Quitar el scroll horizontal 
-        overflow -> si se sobresale el contenido
-        hidden -> esconder
-    */
     overflow-x: hidden;
     /* ajuste a mis dimensiones */
     box-sizing: border-box;
@@ -46,78 +56,117 @@ body{
 /* ---------HEADER------- */
 
 /* contenedor padre -> determinen dimensiones */
-header{
-    /* ancho */
-    /* vw -> ancho de pantalla
-        vh -> alto de pantalla
-    */
+header {
+
     width: 100vw;
     height: 100vh;
 }
 
 /* Lo que está dentro del header son hijos */
 
-.menuNav{
-    background-color: var(--colorClaro);
-    width: 100%;
-    height: 100px;
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--SegundoColorFondo);
 }
 
 /* contenedor padre de las listas que quiero modificar una al lado del otro */
-.listaMenu{
-    height:100%;
-    /* disposición flexible -> los elementos uno al lado del otro */
+.listaMenu {
     display: flex;
-    /* centrar */
-    /* centra an x */
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 30%;
+
+}
+
+.listaMenu a {
+    /* quitar la decoración del texto */
+    font-family: var(--tipografia);
+    /* color del texto */
+    color: var(--colorNavIcons);
+    /* tamaño de texto */
+    font-size: 30px;
+    /* más ancha la letra -> negrilla */
+    font-weight: bold;
+    font-style: normal
+}
+
+.listaMenu a:hover {
+    color: var(--colorSecundario);
+}
+
+.logo {
     justify-content: center;
     /* centrar en y */
     align-items: center;
-    /* separeciones entre elementos hijos */
-    gap: 50px;
-    /* quitar viñetas de lista */
-    list-style: none;
-}
-
-.listaMenu a{
-    /* quitar la decoración del texto */
-    text-decoration: none;
-    /* color del texto */
-    color: var(--colorTexto);
-    /* tamaño de texto */
-    font-size: 18px;
-    /* más ancha la letra -> negrilla */
-    font-weight: bold;
-}
-
-.listaMenu a:hover{
-    color: white;
-}
-
-.logo{
     /* ancho */
-    width: 50px;
+    width: 192px;
     /* alto */
-    height: 50px;
+    height: 192px;
 }
 
 
 /* banner */
 /* contenedor padre de la imagen */
+.baner {
+    border: solid 20px #B23B29;
+    background: linear-gradient(#92DDC2,rgba(253, 253, 253, 0.1));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.baner img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+} 
+
+.texto-baner h2 {
+    font-family: var(--tipografia);
+    font-size: 75px;
+    margin-top: 4px;
+    margin-left: 10px;
+    text-align:left;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.btn {
+    display:inline-block;
+    padding: 12px;
+    background: var(--colorPrincipal);
+    border-radius: 10px;
+    color: var(--colorText);
+    font-size: 1rem ;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all .45s ease;
+  }
+  .btn:hover{
+    transform: scale(0.9);
+  }
+
+/*
 .baner{
     width: 100%;
     height: 80%;
 }
 /* mi imagen ocupa todo el espacio de su padre */
+/*
 .baner img{
     width: 100%;
     height: 100%;
-    /* manipular la img */
+   
     object-fit: fill;
-}
+} 
+*/
 
 /* ---------MAIN------- */
-main{
+main {
     width: 100%;
     height: auto;
     display: flex;
@@ -128,29 +177,32 @@ main{
 }
 
 /* Seccion 1 */
-.seccion1{
+.seccion1 {
     width: 80%;
 }
-#div-video{
+
+#div-video {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-#div-video iframe{
+
+#div-video iframe {
     width: 50%;
 }
 
-#div-video p{
+#div-video p {
     width: 50%;
 }
+
 /* Seccion 2 */
 
-.seccion2{
+.seccion2 {
     width: 80%;
 }
 
-.contenedor-img{
+.contenedor-img {
 
     /* organizar en filas y columnas */
     display: grid;
@@ -163,13 +215,13 @@ main{
     gap: 10px;
 }
 
-.contenedor-img img{
+.contenedor-img img {
     width: 100%;
     height: 100%;
 }
 
 
-.titulo{
+.titulo {
     /* centrar texto */
     text-align: center;
     /* textos en mayúscula */
@@ -182,7 +234,7 @@ main{
 
 /* definir qué es lo que van a editar */
 /* contenedor padre */
-footer{
+footer {
     /* dimensiones */
     width: 100%;
     height: auto;
@@ -196,20 +248,22 @@ footer{
     color: white;
 }
 
-.logo-2{
+.logo-2 {
     width: 100px;
     height: 100px;
 }
 
 /* Los íconos en css y html, se toman como si fueran texto */
-.redesSociales{
+.redesSociales {
     text-align: center;
 }
-h3{
+
+h3 {
     text-align: center;
     margin-bottom: 15px;
 }
-i{
+
+i {
     margin: 15px;
     color: white;
 }
