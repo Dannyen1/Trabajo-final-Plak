@@ -1,136 +1,329 @@
-
 /* Importaciones */
 @import url('https://fonts.cdnfonts.com/css/exo-3');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-
-
 /* Variables*/
 :root{
+    /*Fuentes*/
     --tipografia:'Exo', sans-serif;
     --tipografia1:'Poppins', sans-serif;
-    --colorFondo: #92DDC2;
-    --colorClaro:#DDC292;
-    --colorTexto:#353530;
-    --colorContraste:#B23B29;
+    /*Paleta de colores*/
+    --colorClaro: #92DDC2;
+    --colorOscuro:#353530;
+    --colorContraste1:#B23B29;
+    --colorContraste2:#DDC292;
 }
 
-
+/* Condiciones iniciales*/
 *{
-    /* margin ->margen externo */
     margin:0;
-    /* padding -> margen interno */
     padding: 0;
-}
-
-body{
-    /* Ancho del tamaño de mi pantalla */
-    width: 100%;
-
-    /* background-color -> color de fondo */
-    background-color: var(--colorTexto);
-    /* tipografía */
-    font-family: var(--tipografia);
-    /* color de la letra */
-    color: var(--colorTexto);
-    /* Quitar el scroll horizontal 
-        overflow -> si se sobresale el contenido
-        hidden -> esconder
-    */
-    overflow-x: hidden;
-    /* ajuste a mis dimensiones */
     box-sizing: border-box;
 }
+body{
+    width: 100vw;
+    height: auto;
+    background-color: #92ddc285;
+    font-family: var(--tipografia);
+    color: var(--colorOscuro);
+    overflow-x: hidden;
+}
 
+/*----- HEADER -----*/
 
-/* ---------HEADER------- */
-
-/* contenedor padre -> determinen dimensiones */
 header{
-    /* ancho */
-    /* vw -> ancho de pantalla
-        vh -> alto de pantalla
-    */
     width: 100vw;
     height: 100vh;
 }
 
-/* Lo que está dentro del header son hijos */
-
+/* Menú de navegación */
 .menuNav{
-    background-color: var(--colorClaro);
-    width: 100%;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    width: 100vw;
     height: 100px;
+    padding: 10px;
+    position: fixed;
 }
-
-/* contenedor padre de las listas que quiero modificar una al lado del otro */
-.listaMenu{
-    height:100%;
-    /* disposición flexible -> los elementos uno al lado del otro */
+.logo{
+    height: 50%;
+    width: auto;
     display: flex;
-    /* centrar */
-    /* centra an x */
     justify-content: center;
-    /* centrar en y */
     align-items: center;
-    /* separeciones entre elementos hijos */
+}
+.img-logo{
+    height: 35px;
+}
+.listaMenu{
+    width: 100%;
+    height:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
-    /* quitar viñetas de lista */
     list-style: none;
 }
-
 .listaMenu a{
-    /* quitar la decoración del texto */
     text-decoration: none;
-    /* color del texto */
-    color: var(--colorTexto);
-    /* tamaño de texto */
+    color: var(--colorClaro);
     font-size: 18px;
-    /* más ancha la letra -> negrilla */
     font-weight: bold;
 }
-
 .listaMenu a:hover{
-    color: white;
+    color: var(--colorContraste2);
 }
 
-.logo{
-    /* ancho */
-    width: 50px;
-    /* alto */
-    height: 50px;
-}
-
-
-/* banner */
-/* contenedor padre de la imagen */
-.baner{
+/* Banner */
+.banner{
     width: 100%;
-    height: 80%;
+    height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(to bottom, var(--colorClaro), #FFFF);
 }
-/* mi imagen ocupa todo el espacio de su padre */
-.baner img{
+.banner1{
     width: 100%;
     height: 100%;
-    /* manipular la img */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-completo{
+    padding-left: 100px;
+    width: 50%;
+}
+.logo-completo img{
+    width: 50%;
+    height: 50%;
     object-fit: fill;
 }
+.slogan {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    padding-right: 100px;
+    font-size: 275%;
+    text-align: right;
+}
+#Boton1{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: var(--tipografia1);
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #277C5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#Boton1:hover {
+    background-color: var(--colorContraste1);
+}
 
-/* ---------MAIN------- */
+/*----- MAIN -----*/
 main{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* dispongan una debajo de la otra */
     flex-direction: column;
 }
 
-/* Seccion 1 */
-.seccion1{
-    width: 80%;
+/* Anuncios */
+.anuncios{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background: linear-gradient(to bottom, #FFFF, var(--colorClaro));
 }
+.anuncio1{
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.img-anuncio{
+    position: relative;
+    width: 85%;
+    height: 80%;
+    font-weight: bold;
+}
+.img-anuncio p {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; 
+    font-size: 35px;
+}
+.img-anuncio img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0.6;
+    object-fit: fill;
+}
+#Boton2{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+}
+#Boton2:hover {
+    background-color: var(--colorContraste1);
+}
+#Boton3{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+}
+#Boton3:hover {
+    background-color: var(--colorContraste1);
+}
+#Boton4{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+}
+#Boton4:hover {
+    background-color: var(--colorContraste1);
+}
+/* Carrusel */
+h4,h2,small,a{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.corousel{
+    width: 100%;
+    margin: 0px 0px;
+}
+@media(min-width: 768px){
+    .corousel{
+        margin: 0px 60px;
+    }
+}
+.carrousel h2 {
+    font-size: 45px;
+    line-height: 38px;
+    padding-bottom: 50px;
+    opacity: .9;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: #FFFF;
+}
+.carrusel-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.carrusel-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.carrusel{
+    position: relative;
+    width: 210px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.carrusel h4 {
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color:#FFFF;
+    padding: 15px;
+}
+.carrusel h4 small {
+    font-size: 15px;
+    display: block;
+}
+.carrusel a img {
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5 px 0 rgba (0,0,0,0.5);
+    transition: .3s ease-in-out;
+}
+@media(min-width:768px){
+    .carrusel{
+        width: 275px;
+    }
+    .carrusel a img {
+        width: 250 px;
+    }
+}
+.carrusel-arrow{
+    border-radius: 30px;
+    background-color: #FFFF;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+.carrusel-arrow:focus{
+    outline:0;
+}
+.carrusel-arrow svg {
+    width: 12px;
+    height: 100%;
+    color:rgba(0,0,0,0.7);
+}
+.carrusel-prev {
+    left: 0px;
+}
+.carrusel-next {
+    right: 0px;
+}
+
+
+
+
+
+
 #div-video{
     display: flex;
     justify-content: center;
