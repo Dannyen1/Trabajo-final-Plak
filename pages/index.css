@@ -1,0 +1,343 @@
+/* Importaciones */
+@import url('https://fonts.cdnfonts.com/css/exo-3');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* Variables*/
+:root {
+    /*Fuentes*/
+    --tipografia: 'Exo', sans-serif;
+    --tipografia1: 'Poppins', sans-serif;
+    /*Paleta de colores*/
+    --colorClaro: #92DDC2;
+    --colorOscuro: #353530;
+    --colorContraste1: #B23B29;
+    --colorContraste2: #DDC292;
+}
+
+/* Condiciones iniciales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 1px;
+    background: linear-gradient(to bottom, #FFFF, var(--colorClaro));
+    font-family: var(--tipografia);
+    color: var(--colorOscuro);
+    overflow-x: hidden;
+}
+
+/*----- HEADER -----*/
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Menú de navegación */
+.menuNav {
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    width: 100vw;
+    height: 100px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo {
+    height: 100px;
+}
+
+.listaMenu {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.listaMenu a {
+    text-decoration: none;
+    color: var(--colorClaro);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.listaMenu a:hover {
+    color: var(--colorContraste2);
+}
+
+
+
+/*----- MAIN -----*/
+.main-content {
+    border-color: solid red 10px;
+    background-color: #92ddc2;
+    /* Color de fondo del contenido principal */
+    padding: 100px;
+
+}
+
+.feature-section {
+
+    color: var(--colorOscuro);
+    /* Color del texto */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+.feature-section h1 {
+    font-size: 24px;
+    /* Tamaño del título */
+}
+
+.feature-section p {
+    font-size: 16px;
+    /* Tamaño del texto del párrafo */
+}
+
+.feature-section .differentials {
+    list-style: none;
+    /* Remueve los estilos de lista */
+    padding: 0;
+}
+
+.feature-section .differentials li {
+    margin-bottom: 10px;
+    /* Espacio entre elementos de la lista */
+}
+
+.feature-section img {
+    max-width: 100%;
+    /* Asegura que la imagen no sobrepase el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Para que la imagen no tenga espacio extra debajo */
+    margin-top: 20px;
+    /* Espacio por encima de la imagen */
+
+}
+
+.img-conoceme {
+    height: 50px;
+    border: solid red 5px;
+}
+
+/* Añadir más estilos según sea necesario */
+
+
+
+/* ---------FOOTER------- */
+
+/* definir qué es lo que van a editar */
+/* contenedor padre */
+footer {
+    /* dimensiones */
+    width: 100%;
+    height: auto;
+    /* aspectos generales */
+    background-color: var(--colorClaro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    align-items: center;
+    color: white;
+}
+
+.footer-contact {
+
+    width: 100vw;
+    height: 100%;
+
+
+}
+
+.footer-contact h2 {
+    text-align: center;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-2 {
+    width: 100px;
+    height: 100px;
+}
+
+/* Los íconos en css y html, se toman como si fueran texto */
+.redesSociales {
+    text-align: center;
+    color: #92DDC2;
+}
+
+h3 {
+    font-family: var(--tipografia);
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--colorOscuro);
+    
+}
+
+i {
+    margin: 15px;
+    color: var(--colorClaro);
+}
+
+.site-footer {
+    font-family: var(--tipografia);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #92ddc2;
+    /* Color de fondo del footer */
+    padding: 0px;
+}
+
+.footer-contact h2 {
+    color: var(--colorOscuro);
+    text-decoration: underline;
+}
+
+.footer-social p {
+    font-family: var(--tipografia);
+    color: var(--colorClaro);
+    /* Color del texto */
+}
+
+.footer-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.footer-contact textarea {
+    margin-bottom: 50px;
+    padding: 10px;
+
+}
+
+.mensaje-contact {
+    height: 15vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    height: 15vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    border-color: solid var(--colorOscuro);
+
+}
+
+.email-contact {
+    height: 3vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    border-color: solid var(--colorOscuro);
+}
+
+.text-emailcontact{
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    color: #353530;
+    margin-top: 20px;
+}
+
+.text-mensajecontact{
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    color: #353530;
+    margin-top: 50px;
+}
+
+
+.footer-contact button {
+    font-family: var(--tipografia);
+    background-color: var(--colorOscuro);
+    /* Color de fondo del botón */
+    color: var(--colorClaro);
+    /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 10vw;
+    margin-left: 450px;
+    border-radius: 10px;
+
+}
+
+.footer-social img {
+    margin-bottom: 10px;
+}
+
+.footer-social {}
+
+.social-icons {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    
+
+}
+
+.footer-social a {
+    color: var(--colorClaro);
+    /* Color del enlace */
+    text-decoration: none;
+
+
+
+}
+
+.p-redessociales{
+    font-size: 30PX;
+}
+
+.footer-social {
+    background-color: var(--colorOscuro);
+    height: 50vw;
+    width: 100%;
+    text-align: center;
+    
+
+
+
+
+
+}
+
+.logo-redes {
+    border-color: 4px solid red;
+    height: 400px;
+    align-items: center;
+
+
+}
+
+/* Añadir estilos responsivos si es necesario */
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;
+    }
+}
