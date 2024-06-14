@@ -83,10 +83,10 @@ header {
 
 /*------Main--------*/
 .titulo {
+    border: solid red;
     height: 75px;
     text-align: center;
-    margin-bottom: 10%;
-
+    margin-top: 50px;
 }
 
 .titulo h2 {
@@ -97,7 +97,6 @@ header {
 
 .titulo span {
     font-size: 40px;
-
 }
 
 .portafolio-contenido {
