@@ -1,70 +1,219 @@
-<!-- vamos seguir con la importancia del posicionamiento -->
+<!--INDEX - Trabajo final módulo 1: Plak-->
+
+<!--html:5-->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- METADATOS -->
-  <meta name="author" content="Carlos Pareja Galvis, Laura Corredor Tovar, Daniel Amado Gutierrez">
-  <meta name="keywords" content="Papeleria, Insumos, Escolar, Oficina, Accesorios, Perifericos">
-  <meta name="description" content="PLAK es tu tienda en línea de insumos de papelería, 
-    ofreciendo una amplia gama de productos para oficina, escolares y accesorios.
-     Descubre nuestra selección de materiales de alta calidad y encuentra todo lo que necesitas para tu
-      trabajo y estudio. ¡Compra ahora y disfruta de la mejor experiencia en compras de papelería en PLAK!">
-
-  <!-- LINKS DE LOS ESTILOS DE MI PAGINA -->
-  <link rel="stylesheet" href="./styles/index.css">
-  <!-- Link de icono de pestaña navegador -> favicon -->
-  <link rel="shortcut icon" href="./assets/LogoFavicon.ico" type="image/icon-empresa">
-
-  <title>PLAK tienda virtual</title>
+    <!-- Metadatos -->  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos, Daniel, Laura">
+    <meta name="keywords" content="papeleria, articulos de oficina, escolar">
+    <meta name="description" content="Trabajo final módulo 1">
+    <!-- Links de estilos: Conección .css -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- Link del icono: favicon -->
+    <link rel="shortcut icon" href="./assets/LogoFavicon.ico" type="image/x-icon">
+    <!-- Link de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- Conección con js -->
+    <script src="./scripts/index.js" defer></script>
+    <!-- Título -->
+    <title> PLAK - Inicio </title>
 </head>
 
 <body>
-  <!-- Encabezado -->
-  <header>
-    <nav class="menuNav">
+    <!-- HEADER - Encabezado -->
+    <header>
+      <!-- Etiqueta navegación -->
+      <nav class="menuNav">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">
+            <img class="img-logo" src="./assets/Logo1.png" alt="logo">
+          </a>
+        </div>
+        <!-- Lista de menú -->
+        <ul class="listaMenu">
+          <li><a href="./pages/ESCOLAR.html">Escolar</a></li>
+          <li><a href="./pages/OFICINA.html">Oficina</a></li>
+          <li><a href="./pages/ACCESORIOS.html">Accesorios</a></li>
+          <li><a href="#footer">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Sección banner -->
+      <section class="banner">
+        <div class="banner1">
+          <!-- Logo en negro -->
+          <div class="logo-completo">
+            <img class="img-logo-completo" src="./assets/Logo2.png" alt="logo-completo">
+          </div>
+          <!-- Banderin -->
+          <div class="banderin">
+            <img class="banderin-img" src="./assets/index/banner-banderin.png" alt="banderin">
+          </div>
+          <!-- Slogan -->
+          <div class="slogan">
+            <h1>Más que papelería, soluciones creativas</h1>
+            <a href="./pages/CONOCEM.html"><button id="Boton1">Conoce más</button></a>
+          </div>
+        </div>
+      </section>
+    </header>
 
-      <a class="Cont-Logo" href="./index.html">
-        <img class="logo" src="./assets/Logo1.png" alt="logo">
-      </a>
-
-
-      <ul class="listaMenu">
-        <li><a href="#Escolar">Escolar</a></li>
-        <li><a href="#Oficina">Oficina</a></li>
-        <li><a href="#Accesorios">Accesorios</a></li>
-        <li><a href="#Contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- Seccion baner -->
-    <section class="baner">
-      <div class="baner-img">
-        <img src="./assets/BANER.png" alt="Baner PLAK">
+    <!-- MAIN - Contenido -->
+    <main>
+      <!-- Sección 1: Anuncios -->
+      <section class="anuncios">
+        <div class="anuncio1">
+          <div class="img-anuncio">
+            <img class="img-anuncio-1" src="./assets/index/img1.jpeg" alt="elementos escolares">
+            <p>Elementos escolares</p>
+          </div>
+          <a href="./pages/ESCOLAR.html"><button id="Boton2">Ver más</button></a>
+        </div>
+        <div class="anuncio1">
+          <div class="img-anuncio">
+            <img class="img-anuncio-2" src="./assets/index/img2.jpeg" alt="papeleria de oficina">
+            <p>Papeleria de oficina</p>
+          </div>
+          <a href="./pages/OFICINA.html"><button id="Boton3">Ver más</button></a>
+        </div>
+        <div class="anuncio1">
+          <div class="img-anuncio">
+            <img class="img-anuncio-3" src="./assets/index/img3.jpeg" alt="accesorios">
+            <p>Accesorios</p>
+          </div>
+          <a href="./pages/ACCESORIOS.html"><button id="Boton4">Ver más</button></a>
+        </div>
+      </section>
+      <!-- Sección 2: Escolar -->
+      <section class="escolar">
+        <div class="titulo-carrusel"><h2>ESCOLAR</h2><span>¡Todo lo que necesitas para brillar en clase!</span></div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <ul class="carousel">
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img13.jpg" alt="img" draggable="false"></div>
+              <h3>Borrador y sacapuntas</h3>
+              <span>$$$</span>
+            </li>
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img14.webp" alt="img" draggable="false"></div>
+              <h3>Marcadores</h3>
+              <span>$$$</span>
+            </li>
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img15.jpg" alt="img" draggable="false"></div>
+              <h3>Lapices</h3>
+              <span>$$$</span>
+            </li>
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img16.jpg" alt="img" draggable="false"></div>
+              <h3>Cuadernos</h3>
+              <span>$$$</span>
+            </li>
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img17.jpeg" alt="img" draggable="false"></div>
+              <h3>Tijeras</h3>
+              <span>$$$</span>
+            </li>
+            <li class="card">
+              <div class="img"><img src="./assets/catalogo/img18.jpeg" alt="img" draggable="false"></div>
+              <h3>Colores</h3>
+              <span>$$$</span>
+            </li>
+          </ul>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
+      <!-- Sección 3: Oficina -->
+      <section class="oficina">
+      <div class="titulo-carrusel"><h2>OFICINA</h2><span>Organizada, eficiente, profesional.</span></div>
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img7.jpg" alt="img" draggable="false"></div>
+            <h3>Legajadores</h3>
+            <span>$$$</span>
+          </li>
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img8.jpg" alt="img" draggable="false"></div>
+            <h3>Clips</h3>
+            <span>$$$</span>
+          </li>
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img9.webp" alt="img" draggable="false"></div>
+            <h3>Lapiceros</h3>
+            <span>$$$</span>
+          </li>
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img10.png" alt="img" draggable="false"></div>
+            <h3>Dispensador de cinta</h3>
+            <span>$$$</span>
+          </li>
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img11.jpg" alt="img" draggable="false"></div>
+            <h3>Portalapices</h3>
+            <span>$$$</span>
+          </li>
+          <li class="cardOfi">
+            <div class="img"><img src="./assets/catalogo/img12.jpg" alt="img" draggable="false"></div>
+            <h3>Grapadora</h3>
+            <span>$$$</span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
       </div>
-      <div class="texto-baner">
-        <h2>Más que papelería,soluciones creativas</h2>
-        <a href="pages/CONOCEM.html" class="btn">Conoce más</a>
+      </section>
+      <!-- Sección 4: Accesorios -->
+      <section class="accesorios">
+        <div class="titulo-carrusel"><h2>ACCESORIOS</h2><span>Optimiza tu espacio, maximiza tu productividad</span></div>
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img1.webp" alt="img" draggable="false"></div>
+            <h3>Tablero borrable</h3>
+            <span>$$$</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img2.jpg" alt="img" draggable="false"></div>
+            <h3>Calendario</h3>
+            <span>$$$</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img3.jpg" alt="img" draggable="false"></div>
+            <h3>Morral</h3>
+            <span>$$$</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img4.webp" alt="img" draggable="false"></div>
+            <h3>Soporte PC</h3>
+            <span>$$$</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img5.webp" alt="img" draggable="false"></div>
+            <h3>Mouse</h3>
+            <span>$$$</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="./assets/catalogo/img6.webp" alt="img" draggable="false"></div>
+            <h3>Teclado</h3>
+            <span>$$$</span>
+          </li>
+        </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
       </div>
-    </section>
+      </section>
+    </main>
 
+    <!-- FOOTER - Pie de página -->
 
-  </header>
-
-  <!-- contenido pagina -->
-  <main>
-
-
-  </main>
-
-  <!-- pie de pagina -->
-
-  <footer>
-    <p>Practica de desarrollo creado por &copy; Carlos Pareja 2024</p>
-
-  </footer>
+    <footer>
+      <p>Trabajo final 1er módulo creado por &copy; Carlos, Daniel, Laura 2024</p>
+    </footer>
 </body>
 
 </html>

@@ -2,186 +2,449 @@
 @import url('https://fonts.cdnfonts.com/css/exo-3');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-/* condiciones o estilos iniciales de mi página */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", "Exo";
-}
-
 /* Variables*/
-:root {
-    /*PLAK ESTILOS Y COLORES */
-    --colorFondo: #92DDC2;
-    --SegundoColorFondo: #353530;
-    --TercerColorFondo: #FFFFFF;
-    --colorText: #fff;
-    --colorSecundario: #ccc;
-    --colorPrincipal: #76ABAE;
-    --colorNavIcons: #92DDC2;
-    --color2NavIcons: #DDC292;
-    --Fuente-h2: 3rem;
-
-    /*Colores pag Actividad 1, BORRAR LUEGO*/
-    --tipografia: "Exo", sans-serif;
-    --tipografia1: 'Poppins', sans-serif;
-    --colorFondo: #92DDC2;
-    --colorClaro: #DDC292;
-    --colorTexto: #353530;
-    --colorContraste: #B23B29;
+:root{
+    /*Fuentes*/
+    --tipografia:'Exo', sans-serif;
+    --tipografia1:'Poppins', sans-serif;
+    /*Paleta de colores*/
+    --colorClaro: #92DDC2;
+    --colorOscuro:#353530;
+    --colorContraste1:#B23B29;
+    --colorContraste2:#DDC292;
 }
 
-
-
-body {
-    /* Ancho del tamaño de mi pantalla */
-    width: 100%;
-
-    /* background-color -> color de fondo */
-    background-color: var(--TercerColorFondo);
-    /* tipografía */
-    font-family: var(--tipografia);
-    /* color de la letra */
-    color: var(--colorTexto);
-    overflow-x: hidden;
-    /* ajuste a mis dimensiones */
+/* Condiciones iniciales*/
+*{
+    margin:0;
+    padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100vw;
+    height: auto;
+    background-color: #92ddc285;
+    font-family: var(--tipografia);
+    color: var(--colorOscuro);
+    overflow-x: hidden;
+}
 
+/*----- HEADER -----*/
 
-/* ---------HEADER------- */
-
-/* contenedor padre -> determinen dimensiones */
-header {
-
+header{
     width: 100vw;
     height: 100vh;
 }
 
-/* Lo que está dentro del header son hijos */
-
-.menuNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--SegundoColorFondo);
+/* Menú de navegación */
+.menuNav{
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    width: 100vw;
+    height: 100px;
+    padding: 10px;
+    position: fixed;
+    z-index: 10 ;
 }
-
-/* contenedor padre de las listas que quiero modificar una al lado del otro */
-.listaMenu {
+.logo{
+    height: 50%;
+    width: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 30%;
-
+    align-items: center;
 }
-
-.listaMenu a {
-    /* quitar la decoración del texto */
-    font-family: var(--tipografia);
-    /* color del texto */
-    color: var(--colorNavIcons);
-    /* tamaño de texto */
-    font-size: 30px;
-    /* más ancha la letra -> negrilla */
+.img-logo{
+    height: 35px;
+}
+.listaMenu{
+    width: 100%;
+    height:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+.listaMenu a{
+    text-decoration: none;
+    color: var(--colorClaro);
+    font-size: 18px;
     font-weight: bold;
     font-style: normal
 }
-
-.listaMenu a:hover {
-    color: var(--colorSecundario);
+.listaMenu a:hover{
+    color: var(--colorContraste2);
 }
 
-.logo {
+/* Banner */
+.banner{
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(to bottom, var(--colorClaro), #FFFF);
+}
+.imgBanner {
+    object-fit: fill;
+}
+.banner1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
     justify-content: center;
-    /* centrar en y */
-    align-items: center;
-    /* ancho */
-    width: 192px;
-    /* alto */
-    height: 192px;
-}
-
-
-/* banner */
-/* contenedor padre de la imagen */
-.baner {
-    border: solid 20px #B23B29;
-    background: linear-gradient(#92DDC2,rgba(253, 253, 253, 0.1));
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
-
-.baner img{
+.banderin {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+}
+.banderin img {
     width: 100%;
     height: 100%;
     object-fit: fill;
-} 
-
-.texto-baner h2 {
-    font-family: var(--tipografia);
-    font-size: 75px;
-    margin-top: 4px;
-    margin-left: 10px;
-    text-align:left;
+}
+.logo-completo{
+    padding-left: 100px;
+    width: 50%;
+}
+.logo-completo img{
+    width: 50%;
+    height: 50%;
+    object-fit: fill;
+}
+.slogan {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    padding-right: 100px;
+    font-size: 275%;
+    text-align: right;
+    z-index: 2;
+}
+#Boton1{
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: var(--tipografia1);
     font-weight: bold;
-    line-height: 1;
-}
-
-.btn {
-    display:inline-block;
-    padding: 12px;
-    background: var(--colorPrincipal);
     border-radius: 10px;
-    color: var(--colorText);
-    font-size: 1rem ;
-    letter-spacing: 1px;
-    font-weight: 700;
-    transition: all .45s ease;
-  }
-  .btn:hover{
-    transform: scale(0.9);
-  }
-
-/*
-.baner{
-    width: 100%;
-    height: 80%;
+    background-color: #277C5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
 }
-/* mi imagen ocupa todo el espacio de su padre */
-/*
-.baner img{
-    width: 100%;
-    height: 100%;
-   
-    object-fit: fill;
-} 
-*/
+#Boton1:active{
+    transform: scale(0.85);
+    background-color: var(--colorContraste1);
+}
 
-/* ---------MAIN------- */
-main {
+/*----- MAIN -----*/
+main{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* dispongan una debajo de la otra */
     flex-direction: column;
 }
 
-/* Seccion 1 */
-.seccion1 {
-    width: 80%;
+/* Anuncios */
+.anuncios{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background: linear-gradient(to bottom, #FFFF, var(--colorClaro));
+}
+.anuncio1{
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.img-anuncio{
+    position: relative;
+    width: 85%;
+    height: 80%;
+    font-weight: bold;
+    overflow: hidden;
+}
+.img-anuncio p {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; 
+    font-size: 35px;
+}
+.img-anuncio img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    object-fit: fill;
+}
+.img-anuncio img:hover{
+    transform: scale(1.5);
+    overflow: hidden;
 }
 
-#div-video {
+#Boton2{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+#Boton2:active{
+    transform: scale(0.85);
+    background-color: var(--colorContraste1);
+}
+#Boton3{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+#Boton3:active{
+    transform: scale(0.85);
+    background-color: var(--colorContraste1);
+}
+#Boton4{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: var(--tipografia1);
+    border-radius: 30px;
+    background-color: var(--colorOscuro);
+    color: var(--colorClaro);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+#Boton4:active{
+    transform: scale(0.85);
+    background-color: var(--colorContraste1);
+}
+/* Carruseles*/
+.escolar {
+    width: 100%;
+    height: 430px;
+    padding: 30px;
+    background: linear-gradient(to bottom, var(--colorClaro), #eefff9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oficina {
+    width: 100%;
+    height: 430px;
+    padding: 30px;
+    background: #eefff9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accesorios {
+    width: 100%;
+    height: 430px;
+    padding: 30px;
+    background: linear-gradient(to bottom, #eefff9, var(--colorClaro));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilos carrusel escolar y accesorios */
+.titulo-carrusel{
+    height: 70px;
+}
+.titulo-carrusel h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.titulo-carrusel span {
+    text-align: center;
+    font-family: var(--tipografia1);
+    font-size: 0.8 rem;
+}
+.wrapper {
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.wrapper i {
+    top: 125px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    color: #277C5D;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+    left: -22px;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 47px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .card {
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.23);
+    scroll-snap-align: start;
+    height: 290px;
+    width: 270px;
+    list-style: none;
+    background:#baf5e0;
+    padding-bottom: 5px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.carousel .card .img {
+    border: solid #DDC292;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.card .img img {
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.carousel .card h3 {
+    font-family: var(--tipografia1);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 30px 0 5px;
+    color: var(--colorOscuro);
+}
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1rem;
+    font-family: var(--tipografia1);
+}
+/* Estilos carrusel oficina*/
+.carousel.dragging .cardOfi {
+    cursor: grab;
+    user-select: none;
+}
+.carousel :where(.cardOfi, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .cardOfi {
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.23);
+    scroll-snap-align: start;
+    height: 290px;
+    width: 270px;
+    list-style: none;
+    background:#fff;
+    padding-bottom: 5px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.carousel .cardOfi .img {
+    border: solid #DDC292;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.cardOfi .img img {
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.carousel .cardOfi h3 {
+    font-family: var(--tipografia1);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 30px 0 5px;
+    color: var(--colorOscuro);
+}
+.carousel .cardOfi span {
+    color: #6A6D78;
+    font-size: 1rem;
+    font-family: var(--tipografia1);
+}
+
+  
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2));
+    }
+}
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+}
+
+
+#div-video{
     display: flex;
     justify-content: center;
     align-items: center;
