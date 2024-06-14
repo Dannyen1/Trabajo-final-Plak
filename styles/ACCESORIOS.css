@@ -85,8 +85,7 @@ header {
 .titulo {
     height: 75px;
     text-align: center;
-    margin-bottom: 10%;
-
+    margin-top: 50px;
 }
 
 .titulo h2 {
@@ -159,10 +158,9 @@ header {
 }
 
 .capa i {
-    color: var(--colorPrincipal);
+    color: var(--colorOscuro);
     margin-top: 20px;
-    font-size: 20px;
-    background: var(--colorText);
+    font-size: 40px;
     width: 60px;
     height: 60px;
     display: flex;
@@ -329,6 +327,35 @@ i {
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;
+    }
+    
+}
+@media (max-width: 480px) {
+    .listaMenu {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+
+    }
+    .img-logo {
+        height: 45px;
+    }
+    .titulo span {
+        font-size:medium;
+    }
+    .portafolio-contenido {
+        padding:  10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 2.5rem;
+        margin-top: 5rem;
     }
 }
 /* Estilos responsive iphone*/
