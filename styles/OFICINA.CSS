@@ -219,7 +219,9 @@ footer {
 .footer-contact form {
     display: flex;
     flex-direction: column;
-    padding: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
 }
 .footer-contact textarea {
     border: solid var(--colorOscuro);
@@ -327,5 +329,24 @@ i {
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;
+    }
+}
+/* Estilos responsive iphone*/
+@media only screen and (max-width: 768px) {
+    .listaMenu{
+        gap: 30px;
+    }
+}
+
+/* Estilos responsive iPad */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+    footer {
+        height: 500px;
+    }
+    .footer-contact {
+        height: 500px;
+    }
+    .footer-social {
+        height: 500px;
     }
 }
