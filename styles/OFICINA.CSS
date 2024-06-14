@@ -328,4 +328,33 @@ i {
     .site-footer {
         flex-direction: column;
     }
+    
+}
+@media (max-width: 480px) {
+    .listaMenu {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+
+    }
+    .img-logo {
+        height: 45px;
+    }
+    .titulo span {
+        font-size:medium;
+    }
+    .portafolio-contenido {
+        padding:  10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 2.5rem;
+        margin-top: 5rem;
+    }
 }
