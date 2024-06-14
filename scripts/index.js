@@ -27,7 +27,7 @@ carousel.classList.remove("no-transition");
 // Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
     });
 });
 
@@ -82,3 +82,7 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+function conocemas() {
+    window.location.href = './pages/CONOCEM.html';
+}

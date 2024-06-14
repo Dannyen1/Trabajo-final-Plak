@@ -44,7 +44,7 @@ header{
     height: 100px;
     padding: 10px;
     position: fixed;
-    z-index: 1 ;
+    z-index: 10 ;
 }
 .logo{
     height: 50%;
@@ -89,8 +89,20 @@ header{
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
+}
+.banderin {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+}
+.banderin img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 .logo-completo{
     padding-left: 100px;
@@ -108,8 +120,10 @@ header{
     padding-right: 100px;
     font-size: 275%;
     text-align: right;
+    z-index: 2;
 }
 #Boton1{
+    z-index: 1;
     padding: 10px 20px;
     font-size: 16px;
     font-family: var(--tipografia1);
@@ -258,6 +272,7 @@ main{
     justify-content: center;
     align-items: center;
 }
+/* Estilos carrusel escolar y accesorios */
 .titulo-carrusel{
     height: 70px;
 }
@@ -329,44 +344,22 @@ main{
     cursor: grab;
     user-select: none;
 }
-.carousel.dragging .cardOfi {
-    cursor: grab;
-    user-select: none;
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  .carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel :where(.cardOfi, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel .card {
+.carousel .card {
     box-shadow: 3px 3px 6px rgba(0,0,0,0.23);
     scroll-snap-align: start;
     height: 290px;
     width: 270px;
     list-style: none;
     background:#baf5e0;
-    cursor: pointer;
     padding-bottom: 5px;
     flex-direction: column;
     border-radius: 8px;
-  }
-  .carousel .cardOfi {
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.23);
-    scroll-snap-align: start;
-    height: 290px;
-    width: 270px;
-    list-style: none;
-    background:#fff;
-    cursor: pointer;
-    padding-bottom: 5px;
-    flex-direction: column;
-    border-radius: 8px;
-  }
+}
 .carousel .card .img {
     border: solid #277C5D;
     height: 200px;
@@ -391,8 +384,27 @@ main{
     font-size: 1rem;
     font-family: var(--tipografia1);
 }
-
-/*AAAAAA*/
+/* Estilos carrusel oficina*/
+.carousel.dragging .cardOfi {
+    cursor: grab;
+    user-select: none;
+}
+.carousel :where(.cardOfi, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .cardOfi {
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.23);
+    scroll-snap-align: start;
+    height: 290px;
+    width: 270px;
+    list-style: none;
+    background:#fff;
+    padding-bottom: 5px;
+    flex-direction: column;
+    border-radius: 8px;
+}
 .carousel .cardOfi .img {
     border: solid #277C5D;
     height: 200px;
@@ -421,7 +433,7 @@ main{
   
 @media screen and (max-width: 900px) {
     .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
+      grid-auto-columns: calc((100% / 2));
     }
 }
 @media screen and (max-width: 600px) {
