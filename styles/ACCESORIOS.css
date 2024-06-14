@@ -216,3 +216,201 @@ i {
     margin: 15px;
     color: white;
 }
+/* ---------FOOTER------- */
+
+/* definir qué es lo que van a editar */
+/* contenedor padre */
+footer {
+    /* dimensiones */
+    width: 100%;
+    height: auto;
+    /* aspectos generales */
+    background-color: var(--colorClaro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    align-items: center;
+    color: white;
+}
+
+.footer-contact {
+
+    width: 100vw;
+    height: 100%;
+
+
+}
+
+.footer-contact h2 {
+    text-align: center;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-2 {
+    width: 100px;
+    height: 100px;
+}
+
+/* Los íconos en css y html, se toman como si fueran texto */
+.redesSociales {
+    text-align: center;
+    color: #92DDC2;
+}
+
+h3 {
+    font-family: var(--tipografia);
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--colorOscuro);
+    
+}
+
+i {
+    margin: 15px;
+    color: var(--colorClaro);
+}
+
+.site-footer {
+    font-family: var(--tipografia);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #92ddc2;
+    /* Color de fondo del footer */
+    padding: 0px;
+}
+
+.footer-contact h2 {
+    color: var(--colorOscuro);
+    text-decoration: underline;
+}
+
+.footer-social p {
+    font-family: var(--tipografia);
+    color: var(--colorClaro);
+    /* Color del texto */
+}
+
+.footer-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.footer-contact textarea {
+    margin-bottom: 50px;
+    padding: 10px;
+
+}
+
+.mensaje-contact {
+    height: 15vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    height: 15vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    border-color: solid var(--colorOscuro);
+
+}
+
+.email-contact {
+    height: 3vw;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    border-radius: 10px;
+    border-color: solid var(--colorOscuro);
+}
+
+.text-emailcontact{
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    color: #353530;
+    margin-top: 20px;
+}
+
+.text-mensajecontact{
+    margin-left: 50px;
+    font-family: var(--tipografia);
+    color: #353530;
+    margin-top: 50px;
+}
+
+
+.footer-contact button {
+    font-family: var(--tipografia);
+    background-color: var(--colorOscuro);
+    /* Color de fondo del botón */
+    color: var(--colorClaro);
+    /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 10vw;
+    margin-left: 450px;
+    border-radius: 10px;
+
+}
+
+.footer-social img {
+    margin-bottom: 10px;
+}
+
+.footer-social {}
+
+.social-icons {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    
+
+}
+
+.footer-social a {
+    color: var(--colorClaro);
+    /* Color del enlace */
+    text-decoration: none;
+
+
+
+}
+
+.p-redessociales{
+    font-size: 30PX;
+}
+
+.footer-social {
+    background-color: var(--colorOscuro);
+    height: 50vw;
+    width: 100%;
+    text-align: center;
+    
+
+
+
+
+
+}
+
+.logo-redes {
+    border-color: 4px solid red;
+    height: 400px;
+    align-items: center;
+
+
+}
+
+/* Añadir estilos responsivos si es necesario */
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;
+    }
+}
